@@ -24,7 +24,6 @@ DIR_PATH_TO_SAVE_MODEL = "./model_save/01"
 if CUSTOM_MODEL:
     # Training Configuration Editing
     my_config = AutoConfig.from_pretrained("distilbert/distilbert-base-uncased", n_heads=12)
-
     # model load from configuration
     model = AutoModel.from_config(my_config)
 else:
