@@ -35,7 +35,7 @@ training_args = TrainingArguments(
     learning_rate=2e-5,
     per_device_train_batch_size=8,
     per_device_eval_batch_size=8,
-    num_train_epochs=5,
+    num_train_epochs=5
 )
 
 # Tokenizer Setting
@@ -50,7 +50,13 @@ def tokenize_dataset(dataset):
 
 dataset = dataset.map(tokenize_dataset, batched=True)
 
-data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
+
+### a kind of the collate_fn() function
+data_collator = DataCollatorWithPadding(tokenizer=tokenizer) # default
+# Test -> Success
+#data_collator = DataCollatorWithPadding(tokenizer=tokenizer, padding='max_length' , max_length=513) #
+# padding ='max_length' : pad to a maximum length specified with the argument max_length or to the maximum acceptable input length for the model if that argument is not provided.
+# max_length = xxx : max length of the returned list and optionally padding length
 
 trainer = Trainer(
     model=model,
