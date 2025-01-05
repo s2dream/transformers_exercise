@@ -8,7 +8,7 @@ import os
 # model_id = "meta-llama/Llama-3.2-3B-Instruct"
 model_id = "meta-llama/Llama-3.2-3B"
 
-access_token = "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"
+access_token = ""
 login(token=access_token)
 os.environ["HF_ACCESS_TOKEN"] = access_token
 

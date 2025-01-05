@@ -2,7 +2,7 @@ import torch
 from transformers import pipeline
 from huggingface_hub import login
 import os
-access_token = "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"
+access_token = ""
 os.environ["HF_ACCESS_TOKEN"] = access_token
 
 # model_id = "meta-llama/Llama-3.2-3B-Instruct"

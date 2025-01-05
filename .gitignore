@@ -1,6 +1,7 @@
 # model save path
 introduction/model_save/
 introduction/test_trainer/
+token_store/
 
 .idea/
 
