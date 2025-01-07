@@ -2,6 +2,7 @@
 introduction/model_save/
 introduction/test_trainer/
 token_store/
+token_store/access_token_for_HF.txt
 
 .idea/
 
